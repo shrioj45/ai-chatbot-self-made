@@ -1,0 +1,54 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Workspace</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <h2>Shreyas ka AI</h2>
+      <nav>
+        <button onclick="showSection('chat')">💬 Chat</button>
+        <button onclick="showSection('tools')">🧠 Tools</button>
+        <button onclick="showSection('dashboard')">📊 Dashboard</button>
+      </nav>
+    </aside><main class="content">
+  <!-- Chat Section -->
+  <section id="chat" class="section active">
+    <div id="chatBox" class="chat-box"></div>
+    <div class="chat-input">
+      <input type="text" id="userInput" placeholder="Ask something..." />
+      <button onclick="sendMessage()">Send</button>
+    </div>
+  </section>
+
+  <!-- Tools Section -->
+  <section id="tools" class="section">
+    <h2>Smart Tools</h2>
+    <textarea id="toolInput" placeholder="Enter text..."></textarea>
+    <div class="tool-buttons">
+      <button onclick="summarize()">Summarize</button>
+      <button onclick="generateNotes()">Generate Notes</button>
+      <button onclick="explainCode()">Explain Code</button>
+    </div>
+    <div id="toolOutput" class="output"></div>
+  </section>
+
+  <!-- Dashboard Section -->
+  <section id="dashboard" class="section">
+    <h2>Dashboard</h2>
+    <div class="cards">
+      <div class="card">Chats: <span id="chatCount">0</span></div>
+      <div class="card">Tasks: <span id="taskCount">0</span></div>
+    </div>
+  </section>
+</main>
+
+  </div> 
+  
+  <script src="script.js"></script>
+
+</body>
+</html>
